@@ -81,7 +81,7 @@ let shopowner = Object.values(t(authReducer, 'userList').safeObject)
                                         <td>{a.city}</td>
                                         <td>{a.contactNumber}</td>
 
-                                        < button className="btn btn-danger" style={{marginLeft:50}} onClick={this.postModal.bind(this, true)}>Book</button>
+                                        < button className="btn btn-danger" style={{marginLeft:50}} onClick={this.postModal.bind(this,a._id)}>Book</button>
 
                                             </tr>
                                     </tbody>

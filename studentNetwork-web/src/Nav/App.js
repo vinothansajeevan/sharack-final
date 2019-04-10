@@ -48,6 +48,7 @@ export default class App extends Component {
 
     listView(data, index) {
         return (
+
             <div className="row" key={index}>
                 <div className="col-md-10">
                     <li key={index} className="list-group-item clearfix">
@@ -69,8 +70,8 @@ export default class App extends Component {
         this.props.deleteContact(index);
     }
 
-    goNextTab() {
-        browserHistory.push('/upload')
+    goNextTab(tabName) {
+        browserHistory.push('/'+tabName)
     }
 
 
@@ -80,14 +81,14 @@ export default class App extends Component {
             <div className="container">
                 <div className="col-md-2">
                     <div className="sidenav">
-                        <div className="iconStyle">
+                        <div className="iconStyle" onClick={this.goNextTab.bind(this,'order')}>
                             <i className="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="right"
                                title="Profile"></i>
                         </div>
-                        <div className="iconStyle" onClick={this.goNextTab.bind(this)}>
+                        <div className="iconStyle" onClick={this.goNextTab.bind(this,'post')}>
                             <i className="fa fa-eye" data-toggle="tooltip" data-placement="right" title="View"></i>
                         </div>
-                        <div className="iconStyle">
+                        <div className="iconStyle" onClick={this.goNextTab.bind(this,'create')}>
                             <i className="fa fa-cloud-upload" data-toggle="tooltip" data-placement="right"
                                title="Upload"></i>
                         </div>
