@@ -1,0 +1,23 @@
+.loginpad{
+  border: 1px #282c34 solid;
+text-align: center;
+  margin-top: 250px;
+  width: 350px;
+  height: 200px;
+  margin-left: 700px;
+}
+
+input{
+   width: 300px;
+  border: 1px #282c34 solid;
+  color: white;
+  padding: 10px 10px;
+
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+label{
+  margin-right: 175px;
+}
