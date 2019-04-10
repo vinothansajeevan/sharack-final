@@ -6,7 +6,7 @@ import {bindActionCreators} from 'redux'
 import {t} from 'typy';
 
 import {browserHistory} from "react-router";
-
+require('./app.scss');
 
 class order extends Component {
 
@@ -24,7 +24,7 @@ class order extends Component {
 
 
         return (
-            <div className="container">
+            <div className="container" >
                 <br/><br/><br/><br/><br/>
                 <table className="table table-bordered"  style={{marginLeft:83}}>
 
