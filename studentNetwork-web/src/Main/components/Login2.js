@@ -49,6 +49,9 @@ const styles = theme => ({
     submit: {
         marginTop: theme.spacing.unit * 3,
     },
+    button: {
+        backgroundColor: theme.palette.primary.main,
+    }
 });
 
 class SignIn extends Component {
@@ -91,6 +94,8 @@ render(){
 
     return (
         <main className={classes.main}>
+<br/>
+
             <CssBaseline />
             <Paper className={classes.paper}>
                 <Avatar className={classes.avatar}>
@@ -130,18 +135,19 @@ render(){
                         Sign in
                     </Button>
                     <div className="col-md-12">
-        <br/>
-                        Don't have an account? <span
+
+                        Don't you have an account &nbsp;? <br/>Go and Creat your Dashbords. <span
                         ></span>
+    <div>
+    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;
+<button><div onClick={this.signupModal.bind(this)}>Distributor</div></button>
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+<button><div onClick={this.signupModal2.bind(this)}>Shop Owner</div></button>
+    </div>
 
                     </div>
-    <br/>
-                    <div>
-    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;
-                        <button><div onClick={this.signupModal.bind(this)}>Distributor</div></button>
-        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <button><div onClick={this.signupModal2.bind(this)}>Shop Owner</div></button>
-                    </div>
+
+
                 </div>
             </Paper>
         </main>

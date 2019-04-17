@@ -56,9 +56,10 @@ class Login extends Component {
                         {/*</div>*/}
                         <div className="col-sm-5">
                             <div className="col-xs-12 loginpad">
+           
 
                                 <div className="">
-                                    <h4 className="text-center"><b>Sign in</b></h4>
+                                    <h4 className="text-center"><b>Sign in  </b></h4>
                                     <div className="col-xs-12">
                                         <div className="field">
                                             <label>
@@ -93,11 +94,7 @@ class Login extends Component {
                                         <div className="col-xs-6 col-sm-6">
 
                                         </div>
-                                        <div className="col-md-12">
-                                            Don't have an account? <span
-                                            onClick={this.signupModal.bind(this)}>REGISTER</span>
 
-                                        </div>
 
                                     </div>
 

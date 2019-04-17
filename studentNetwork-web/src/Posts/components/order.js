@@ -26,7 +26,7 @@ class order extends Component {
         return (
             <div className="container" >
                 <br/><br/><br/><br/><br/>
-                <table className="table table-bordered"  style={{marginLeft:83}}>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<table className="table table-bordered"  style={{marginLeft:83}}>
 
                     <thead>
                     <tr>

@@ -27,12 +27,33 @@ export default (
                 routes={
                     <Route>
 
-                            <Route name="SignUp" path="/signUp" component={SignUp}/>
-                            <Route name="SignUp2" path="/signUp2" component={SignUp2}/>
-                            <Route name="SignUp2" path="/signUp3" component={SignUp3}/>
+                            // <Route name="SignUp" path="/signUp" component={SignUp}/>
+                    {
+                        Auth.isUserAuthenticated() !== true &&
+                    < Route
+name = "SignUp2"
+path = "/signUp2"
+component = {SignUp2}
+/>
+}
+{
+    Auth.isUserAuthenticated() !== true &&
+    < Route
+    name = "SignUp2"
+    path = "/signUp3"
+    component = {SignUp3}
+    />
+}
 
                             <Route name="login" path="/login" component={Login}/>
-                            <Route name="login" path="/" component={SignIn}/>
+{
+    Auth.isUserAuthenticated() !== true &&
+    < Route
+    name = "login"
+    path = "/"
+    component = {SignIn}
+    />
+}
                             <Route name="post" path="/post" component={Post}/>
                             <Route name="profile" path="/profile" component={Profile}/>
                             <Route name="create" path="/create" component={create}/>
