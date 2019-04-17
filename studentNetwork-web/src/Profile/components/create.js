@@ -14,8 +14,8 @@ class create extends Component {
         }
     }
 
-    postModal(boolean) {
-        this.setState({postModal: boolean})
+    postModal() {
+        browserHistory.push('/profile')
     }
 
     onChange(event) {
@@ -80,7 +80,7 @@ class create extends Component {
                                 </div>
 
                                 <div className="col-sm-offset-1 col-sm-3">
-                                    <button className="btn btn-success" onClick={this.postModal.bind(this, false)}>
+                                    <button className="btn btn-success" onClick={this.postModal.bind(this)}>
                                         <b>Close</b></button>
                                 </div>
                             </div>

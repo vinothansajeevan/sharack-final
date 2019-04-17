@@ -1,7 +1,7 @@
 import ApolloClient from 'apollo-boost';
 import fetch from 'unfetch';
 
-const stuUrl = 'http://localhost:5000/graphql';
+const stuUrl = 'http://localhost:4000/graphql';
 
 let getAccessToken = function () {
     try {

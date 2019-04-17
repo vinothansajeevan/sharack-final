@@ -51,10 +51,10 @@ let shopowner = Object.values(t(authReducer, 'userList').safeObject)
 
         console.log(authReducer, 'authReducer');
         return (
-                   <div className="container" className="btn btn-primary" style={{marginLeft:300, marginTop:100}} >
-    <b> <h1><div>Shop Owner's Dashboard</div></h1></b>
+                   <div className="container"  style={{marginLeft:180, marginTop:100}} >
+    <h1 style={{marginLeft:30}}>Shop Owner's Dashboard</h1>
 
-        <table className="table table-bordered"  >
+        <table className="table table-bordered btn-primary"   style={{marginLeft:30,width:1000}}>
 
                     <thead>
                     <tr>

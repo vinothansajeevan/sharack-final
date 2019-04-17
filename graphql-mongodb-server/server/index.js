@@ -12,7 +12,7 @@ const pubsub = new PubSub();
 let app = express();
 
 const options = {
-  port: process.env.PORT || "5000",
+  port: process.env.PORT || "4000",
   endpoint: "/graphql",
   subscriptions: "/subscriptions",
   playground: "/playground"

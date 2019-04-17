@@ -24,15 +24,15 @@ class order extends Component {
 
 
         return (
-            <div className="container" >
-                <br/><br/><br/><br/><br/>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<table className="table table-bordered"  style={{marginLeft:83}}>
+            <div className="container" style={{marginTop:80}}>
+                <h1 style={{marginLeft:150}}>Distributor's Dashboard</h1>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<table className="table table-bordered btn-primary"  style={{marginLeft:150,width:1000,marginTop:-10}}>
 
                     <thead>
                     <tr>
                         <th>Product</th>
                         <th>Shop Category</th>
-                        <th>quantity</th>
+                        <th>Quantity</th>
                     </tr>
                     </thead>
 

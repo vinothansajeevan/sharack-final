@@ -17,7 +17,11 @@ import * as AuthActions from "../action";
 import {browserHistory} from "react-router";
 import {bindActionCreators} from "redux";
 import withStyles from '@material-ui/core/styles/withStyles';
-
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Grid from '@material-ui/core/Grid';
 const styles = theme => ({
     main: {
         width: 'auto',
@@ -51,7 +55,17 @@ const styles = theme => ({
     },
     button: {
         backgroundColor: theme.palette.primary.main,
-    }
+    },
+    root: {
+        flexGrow: 1,
+    },
+    grow: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginLeft: -12,
+        marginRight: 20,
+    },
 });
 
 class SignIn extends Component {
@@ -93,11 +107,37 @@ render(){
     let inputs = this.props.authReducer.loginRequest;
 
     return (
-        <main className={classes.main}>
-<br/>
+        <div>
+            <div className={classes.root}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+                        </IconButton>
+                        <Typography variant="h3" color="inherit" className={classes.grow}>
+                            <img src={require('./logo2.png')} alt="Kitten" height="70" width="170" />
+
+                        </Typography>
+                        <Button color="inherit" style={{fontSize:13}} onClick={this.signupModal.bind(this)}>Distributor</Button>
+                        <Button color="inherit" style={{fontSize:13}} onClick={this.signupModal2.bind(this)}>Shop Owner</Button>
+                    </Toolbar>
+                </AppBar>
+            </div>
+            <Grid container spacing={24}>
+                <Grid item xs={12} sm={6} style={{  backgroundImage: "url(" + "https://cdn3.iconfinder.com/data/icons/people-network-and-connection-4/512/20-512.png" + ")",
+                    marginTop:80,
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',}}>
+                    <Typography variant="h4" color="inherit" className={classes.grow} style={{marginLeft:75,fontFamily:'coronet',color:"blue"}}>
+                        Bridging The Gap Between Distributors & Shop Owners
+                    </Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+        <main className={classes.main} >
+
 
             <CssBaseline />
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} style={{borderRadius:30}}>
                 <Avatar className={classes.avatar}>
                     <LockOutlinedIcon />
                 </Avatar>
@@ -134,23 +174,26 @@ render(){
                     >
                         Sign in
                     </Button>
-                    <div className="col-md-12">
+                    {/*<div className="col-md-12">*/}
 
-                        Don't you have an account &nbsp;? <br/>Go and Creat your Dashbords. <span
-                        ></span>
-    <div>
-    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;
-<button><div onClick={this.signupModal.bind(this)}>Distributor</div></button>
-    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
-<button><div onClick={this.signupModal2.bind(this)}>Shop Owner</div></button>
-    </div>
+                        {/*Don't you have an account &nbsp;? <br/>Go and Creat your Dashbords. <span*/}
+                        {/*></span>*/}
+    {/*<div>*/}
+    {/*&nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;*/}
+{/*<button><div >Distributor</div></button>*/}
+    {/*&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;*/}
+{/*<button><div >Shop Owner</div></button>*/}
+    {/*</div>*/}
 
-                    </div>
+                    {/*</div>*/}
 
 
                 </div>
             </Paper>
         </main>
+                </Grid>
+            </Grid>
+        </div>
     );
 }
 
