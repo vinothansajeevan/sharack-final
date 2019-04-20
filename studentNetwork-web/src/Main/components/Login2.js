@@ -123,13 +123,16 @@ render(){
                 </AppBar>
             </div>
             <Grid container spacing={24}>
-                <Grid item xs={12} sm={6} style={{  backgroundImage: "url(" + "https://cdn3.iconfinder.com/data/icons/people-network-and-connection-4/512/20-512.png" + ")",
+                <Grid item xs={12} sm={6} style={{
                     marginTop:80,
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',}}>
-                    <Typography variant="h4" color="inherit" className={classes.grow} style={{marginLeft:75,fontFamily:'coronet',color:"blue"}}>
+                   }}>
+                    <Typography variant="h4" color="inherit" className={classes.grow} style={{marginLeft:70,fontFamily:'coronet',color:"blue"}}>
                         Bridging The Gap Between Distributors & Shop Owners
                     </Typography>
+    <Typography variant="h3" color="inherit" className={classes.grow} style={{marginLeft:100,fontFamily:'coronet',color:"blue"}}>
+<img src={require('/home/ukistu04/Documents/uki-4/sharack/stu-project/studentNetwork-web/src/Main/components/Srilanka.png')} alt="Kitten" height="400" width="450" />
+
+        </Typography>
 
                 </Grid>
                 <Grid item xs={12} sm={6}>
